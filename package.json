@@ -1,0 +1,27 @@
+{
+  "name": "KnightHacks2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamirBou/KnightHacks2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamirBou/KnightHacks2020/issues"
+  },
+  "homepage": "https://github.com/SamirBou/KnightHacks2020#readme"
+}
