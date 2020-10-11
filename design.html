@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <title>Journal journies</title>
+    <style>
+    body{
+        background: #c0c0cc
+    }
+    </style>
+    </head>
+
+    <body>    
+
+        <h1>Journal journey!</h1>
+        <form action = "journal" method = "POST" >
+
+        <div>   
+            <label for = "entry">Date, Time(AM/PM), Day Entry</label><br>
+
+            <textarea name = "message" rows = "30" cols = "65" This is where you can store your entry></textarea>
+            <br>
+        </div>
+        <h4> Mood </h4> 
+        <select name="mood">
+                <option selected="selected" value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="angry">Angry</option>
+                <option value="complicated">Complicated</option>
+                <option value="confused">Confused</option>
+                <option value="lost">Lost</option>
+                <option value="exuberant">Exuberant</option>
+                <option value="accomplished">Accomplished</option>
+                <option value="relieved">Relieved</option>
+                <option value="inspired">Inspired</option>
+                <option value="weightless">Weightless</option>
+                <option value="indifferent">Indifferent</option>
+                <option value="meh">Meh</option>
+                <option value="unbothered">Unbothered</option>
+            </select><br /> <br>
+            <input type = "submit" value = "Save Entry">
+        </form>
+    </body>
+
+</html>
