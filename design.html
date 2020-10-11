@@ -1,6 +1,8 @@
+<!-- get the author name from login -->
 <html>
     <head>
     <title>Journal journies</title>
+
     <style>
     body{
         background: #c0c0cc
@@ -14,7 +16,11 @@
         <form action = "journal" method = "POST" >
 
         <div>   
-            <label for = "entry">Date, Time(AM/PM), Day Entry</label><br>
+            <p id="date"></p>
+            <script>
+            document.getElementById("date").innerHTML = Date();
+            </script>
+            <label for = "entry">Record your thoughts, feelings, situations freely :)</label><br>
 
             <textarea name = "message" rows = "30" cols = "65" This is where you can store your entry></textarea>
             <br>
@@ -37,6 +43,7 @@
                 <option value="unbothered">Unbothered</option>
             </select><br /> <br>
             <input type = "submit" value = "Save Entry">
+
         </form>
     </body>
 
