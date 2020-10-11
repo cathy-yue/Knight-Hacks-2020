@@ -11,6 +11,7 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true
 }));
+app.use("/scripts", express.static(__dirname + '/../'));
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
@@ -23,16 +24,17 @@ app.get('/', function(request, response) {
 app.post('/auth', function(request, response) {
 	var username = request.body.username;
     console.log(`Hello `+username);
+
+    response.redirect('/summary')
 });
 
 //Kim's edits start here
-app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname + '../SummaryPage.html')) //so it pull up the summary page here
-    var button = request.body.submit;	//summary page has a button which is supposed to redirect to design.html
-	app.get('/', function(request, response) { 
-	    username = request.body.username; //pull up the page design.html
-	    response.sendFile(path.join(__dirname + '../design.html'))
-	});
+app.get('/summary', function(request, response) {
+    response.sendFile(path.join(__dirname + '/../SummaryPage.html')) //so it pull up the summary page here
+});
+
+app.post('/summary', function(request, response) {
+    response.sendFile(path.join(__dirname + '/../design.html')) //so it pull up the summary page here
 });
 
 app.post('/journal', function(request, response) {
@@ -42,7 +44,7 @@ app.post('/journal', function(request, response) {
 
     Entries(username, date, journal, mood); 
     Post(date, journal, username);
-    // console.log(`Hello `+username);
+    
 });
 //Kim's edits end here
 
