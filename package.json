@@ -1,27 +1,27 @@
 {
-  "name": "KnightHacks2020",
+  "name": "Interactive-Journal",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./login/login.js"
+  },
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.0"
+    "express-session": "^1.17.1",
+    "pug": "^3.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
-  },
-  "scripts": {
-    "dev": "nodemon ./index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SamirBou/KnightHacks2020.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SamirBou/KnightHacks2020/issues"
-  },
-  "homepage": "https://github.com/SamirBou/KnightHacks2020#readme"
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^4.2.0",
+    "nodemon": "^2.0.4",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  }
 }
